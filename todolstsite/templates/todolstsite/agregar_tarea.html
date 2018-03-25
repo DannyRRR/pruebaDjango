@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Inicio</title>
+	</head>
+	<body>
+		<h1>Añadir tarea:</h1>	
+		<form method="POST" class="tarea-form">{% csrf_token %}	
+			{{ form.as_p }}
+            <button type="submit">Guardar</button>			
+		</form>
+		<br>	
+
+	</body>
+</html>
