@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Inicio</title>
+	</head>
+	<body>
+		<h1>Lista de tareas:</h1>
+		{% for tarea in tareas %}		
+		<table width="600px" border="1">			
+			<tr>
+				<td colspan="2"><h1>{{tarea.titulo}}</h1></td>
+			</tr>
+			<tr>
+				<td width="90%">
+					{{tarea.descripcion}}
+				</td>
+				{% if tarea.estado == True %}
+					<td width="10%"><input type="checkbox" name="chkEstado" value={{tarea.id}} checked="checked"></td>
+				{% else %}
+					<td width="10%"><input type="checkbox" name="chkEstado" value={{tarea.id}} ></td>
+				{% endif %}
+			</tr> 
+		</table>
+		<br>
+		{% endfor%}		
+	</body>
+</html>

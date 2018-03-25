@@ -15,10 +15,9 @@ class Tarea(models.Model):
 	titulo = models.CharField(max_length=100)
 	descripcion = models.TextField()
 	estado = models.BooleanField(default=0)
-
 	def marcarRealizado(self):
 		self.estado = 1
 		self.save()
-		
+
 	def __getTitulo__(self):
 		return self.titulo
